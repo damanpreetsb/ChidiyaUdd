@@ -1,0 +1,196 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Cow",
+      "flag": 0,
+      "image": "cow"
+    },
+    {
+      "id": 2,
+      "name": "Batman",
+      "flag": 0,
+      "image": "batman"
+    },
+    {
+      "id": 3,
+      "name": "Crow",
+      "flag": 1,
+      "image": "crow"
+    },
+    {
+      "id": 4,
+      "name": "Dog",
+      "flag": 0,
+      "image": "dog"
+    },
+    {
+      "id": 5,
+      "name": "Cat",
+      "flag": 0,
+      "image": "cat"
+    },
+    {
+      "id": 6,
+      "name": "Superman",
+      "flag": 1,
+      "image": "superman"
+    },
+    {
+      "id": 7,
+      "name": "Pigeon",
+      "flag": 1,
+      "image": "pigeon"
+    },
+    {
+      "id": 8,
+      "name": "Ironman",
+      "flag": 1,
+      "image": "ironman"
+    },
+    {
+      "id": 9,
+      "name": "Parrot",
+      "flag": 1,
+      "image": "parrot"
+    },
+    {
+      "id": 10,
+      "name": "Hair",
+      "flag": 0,
+      "image": "hair"
+    },
+    {
+      "id": 11,
+      "name": "Scarf",
+      "flag": 0,
+      "image": "scarf"
+    },
+    {
+      "id": 12,
+      "name": "Crow",
+      "flag": 1,
+      "image": "crow"
+    },
+    {
+      "id": 13,
+      "name": "Sparrow",
+      "flag": 1,
+      "image": "sparrow"
+    },
+    {
+      "id": 14,
+      "name": "Eagle",
+      "flag": 1,
+      "image": "eagle"
+    },
+    {
+      "id": 15,
+      "name": "Goat",
+      "flag": 0,
+      "image": "goat"
+    },
+    {
+      "id": 16,
+      "name": "Pen",
+      "flag": 0,
+      "image": "pen"
+    },
+    {
+      "id": 17,
+      "name": "Ostrich",
+      "flag": 1,
+      "image": "ostrich"
+    },
+    {
+      "id": 18,
+      "name": "Paper",
+      "flag": 0,
+      "image": "paper"
+    },
+    {
+      "id": 19,
+      "name": "Basket",
+      "flag": 0,
+      "image": "basket"
+    },
+    {
+      "id": 20,
+      "name": "Squirrel",
+      "flag": 0,
+      "image": "squirrel"
+    },
+    {
+      "id": 21,
+      "name": "Duck",
+      "flag": 1,
+      "image": "duck"
+    },
+    {
+      "id": 22,
+      "name": "Fish",
+      "flag": 0,
+      "image": "fish"
+    },
+    {
+      "id": 23,
+      "name": "Penguin",
+      "flag": 0,
+      "image": "penguin"
+    },
+    {
+      "id": 24,
+      "name": "Falcon",
+      "flag": 1,
+      "image": "falcon"
+    },
+    {
+      "id": 25,
+      "name": "Kingfisher",
+      "flag": 1,
+      "image": "kingfisher"
+    },
+    {
+      "id": 26,
+      "name": "Bat",
+      "flag": 1,
+      "image": "bat"
+    },
+    {
+      "id": 27,
+      "name": "Frog",
+      "flag": 0,
+      "image": "frog"
+    },
+    {
+      "id": 28,
+      "name": "Mosquito",
+      "flag": 1,
+      "image": "mosquito"
+    },
+    {
+      "id": 29,
+      "name": "Bee",
+      "flag": 1,
+      "image": "bee"
+    },
+    {
+      "id": 30,
+      "name": "Lizard",
+      "flag": 0,
+      "image": "lizard"
+    },
+    {
+      "id": 31,
+      "name": "Chair",
+      "flag": 0,
+      "image": "chair"
+    },
+    {
+      "id": 32,
+      "name": "Hen",
+      "flag": 0,
+      "image": "hen"
+    }
+  ]
+}

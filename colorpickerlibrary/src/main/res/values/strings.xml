@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ColorPickerLibrary</string>
+    <string name="white">White</string>
+    <string name="choose_color">Choose the color</string>
+</resources>

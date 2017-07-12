@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ChidiyaUdd</string>
+
+    <string name="one_player">One Player</string>
+    <string name="two_player">Two Player</string>
+    <string name="four_player">Four Player</string>
+    <string name="exit">Exit</string>
+    <string name="play">Play</string>
+</resources>

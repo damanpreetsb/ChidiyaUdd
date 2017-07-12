@@ -1,0 +1,4 @@
+<resources>
+    <drawable name="transparent">#00000000</drawable>
+    <drawable name="clicked_gray">#80e0e0e0</drawable>
+</resources>

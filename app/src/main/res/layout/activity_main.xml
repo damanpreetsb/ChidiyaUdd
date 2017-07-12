@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    tools:context="com.singh.daman.chidiyaudd.ui.MainActivity">
+    <Button
+        android:id="@+id/btn_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/one_player"
+        android:textColor="#33b5e5"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/two_player"
+        android:textColor="#33b5e5"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/four_player"
+        android:textColor="#33b5e5"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/exit"
+        android:textColor="#33b5e5"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+</LinearLayout>
