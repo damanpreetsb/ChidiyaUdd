@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.CountDownTimer;
-import android.os.Handler;
+
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -34,7 +34,7 @@ public class TwoPlayerGameActivity extends AppCompatActivity {
     private TextView tvTime, tvTime2, tvScore, tvScore2, tvItem1, tvItem2, tvName1, tvName2;
     private CircleButton circleButton1, circleButton2;
     private Creature creature;
-    private CountDownTimer countDownTimer, totalCountDownTimer;
+    private CountDownTimer countDownTimer, totalCountDownTimer, delayTimer;
     private String message = "";
     private CircularMusicProgressBar circularMusicProgressBar;
     private int progress = 0, color1 = Color.BLUE, color2 = Color.RED;
@@ -75,6 +75,33 @@ public class TwoPlayerGameActivity extends AppCompatActivity {
         tvName1.setText(name1);
         tvName2.setText(name2);
 
+        delayTimer = new CountDownTimer(4000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                if(millisUntilFinished/1000 == 3){
+                    tvItem1.setText("Ready...");
+                    tvItem2.setText("Ready...");
+                }
+                if(millisUntilFinished/1000 == 2){
+                    tvItem1.setText("Steady...");
+                    tvItem2.setText("Steady...");
+                }
+                if(millisUntilFinished/1000 == 1){
+                    tvItem1.setText("Go...");
+                    tvItem2.setText("Go...");
+                }
+            }
+
+            @Override
+            public void onFinish() {
+                playGame();
+            }
+        };
+        delayTimer.start();
+
+    }
+
+    public void playGame(){
         totalCountDownTimer = new CountDownTimer(totalSeconds * 1000, intervalSeconds * 1000) {
 
             public void onTick(long millisUntilFinished) {
