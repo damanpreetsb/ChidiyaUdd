@@ -28,23 +28,23 @@ public class TwoPlayerSettingsActivity extends AppCompatActivity {
     private EditText etName1, etName2, etTime, etMode;
     private int color1 = Color.BLUE, color2 = Color.RED, time, modeTime = 20;
     private String name1, name2;
-    private CharSequence[] values = {"Easy","Medium","Hard"};
+    private CharSequence[] values = {"Easy", "Medium", "Hard"};
     private AlertDialog alertDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_two_player_settings);
 
         button1 = (CircleButton) findViewById(R.id.color1);
         button2 = (CircleButton) findViewById(R.id.color2);
         btnPlay = (Button) findViewById(R.id.btn_play);
-        etName1 = (EditText)findViewById(R.id.name_player1);
-        etName2 = (EditText)findViewById(R.id.name_player2);
-        etTime = (EditText)findViewById(R.id.set_time);
-        etMode = (EditText)findViewById(R.id.set_mode);
+        etName1 = (EditText) findViewById(R.id.name_player1);
+        etName2 = (EditText) findViewById(R.id.name_player2);
+        etTime = (EditText) findViewById(R.id.set_time);
+        etMode = (EditText) findViewById(R.id.set_mode);
 
         button1.setColor(color1);
         button2.setColor(color2);
@@ -89,15 +89,15 @@ public class TwoPlayerSettingsActivity extends AppCompatActivity {
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!TextUtils.isEmpty(etName1.getText().toString()))
+                if (!TextUtils.isEmpty(etName1.getText().toString()))
                     name1 = etName1.getText().toString();
                 else
                     name1 = Constants.player1;
-                if(!TextUtils.isEmpty(etName2.getText().toString()))
+                if (!TextUtils.isEmpty(etName2.getText().toString()))
                     name2 = etName2.getText().toString();
                 else
                     name2 = Constants.player2;
-                if(!TextUtils.isEmpty(etTime.getText().toString()))
+                if (!TextUtils.isEmpty(etTime.getText().toString()))
                     time = Integer.parseInt(etTime.getText().toString());
                 else
                     time = 60;
@@ -109,16 +109,17 @@ public class TwoPlayerSettingsActivity extends AppCompatActivity {
                 intent.putExtra(Constants.time, time);
                 intent.putExtra(Constants.modeTime, modeTime);
                 startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
     }
 
-    public void showModeDialog(){
+    public void showModeDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Select the mode");
         builder.setSingleChoiceItems(values, -1, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int item) {
-                switch(item) {
+                switch (item) {
                     case 0:
                         etMode.setText(values[0]);
                         modeTime = 30;
@@ -137,5 +138,11 @@ public class TwoPlayerSettingsActivity extends AppCompatActivity {
         });
         alertDialog = builder.create();
         alertDialog.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 }

@@ -1,54 +1,51 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
-    android:orientation="vertical"
+    android:background="@color/colorPrimary"
     android:gravity="center"
+    android:orientation="vertical"
     android:padding="30dp"
     tools:context="com.singh.daman.chidiyaudd.ui.MainActivity">
-    <Button
-        android:id="@+id/btn_one"
+
+    <TextView
+        android:id="@+id/main_app_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:text="@string/one_player"
-        android:textColor="#33b5e5"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:padding="16dp"/>
+        android:padding="30dp"
+        android:text="@string/app_name_main"
+        android:textColor="@color/white"
+        android:textSize="42sp" />
 
-    <Button
-        android:id="@+id/btn_two"
+    <LinearLayout
+        android:id="@+id/layout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/two_player"
-        android:textColor="#33b5e5"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:padding="16dp"/>
+        android:visibility="invisible"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_four"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/four_player"
-        android:textColor="#33b5e5"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:padding="16dp"/>
+        <Button
+            android:id="@+id/btn_one"
+            android:text="@string/one_player"
+            style="@style/MainButtons" />
 
-    <Button
-        android:id="@+id/btn_exit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/exit"
-        android:textColor="#33b5e5"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:padding="16dp"/>
+        <Button
+            android:id="@+id/btn_two"
+            android:text="@string/two_player"
+            style="@style/MainButtons"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_four"
+            android:text="@string/four_player"
+            style="@style/MainButtons"/>
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:text="@string/exit"
+            style="@style/MainButtons"/>
+
+    </LinearLayout>
+</FrameLayout>

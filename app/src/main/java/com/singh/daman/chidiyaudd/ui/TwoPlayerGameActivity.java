@@ -244,14 +244,6 @@ public class TwoPlayerGameActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if (countDownTimer != null) {
-            countDownTimer.cancel();
-        }
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
         if (dialog != null) {
             dialog.cancel();
         }
@@ -261,5 +253,11 @@ public class TwoPlayerGameActivity extends AppCompatActivity {
         if (totalCountDownTimer != null) {
             totalCountDownTimer.cancel();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 }
