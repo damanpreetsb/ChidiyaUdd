@@ -68,9 +68,9 @@
     },
     {
       "id": 12,
-      "name": "Crow",
-      "flag": 1,
-      "image": "crow"
+      "name": "Hen",
+      "flag": 0,
+      "image": "hen"
     },
     {
       "id": 13,
@@ -185,12 +185,6 @@
       "name": "Chair",
       "flag": 0,
       "image": "chair"
-    },
-    {
-      "id": 32,
-      "name": "Hen",
-      "flag": 0,
-      "image": "hen"
     }
   ]
 }

@@ -28,7 +28,7 @@ public class Utility {
 
     public void getRandomData(JSONObject jsonObject) {
         Random r = new Random();
-        int random = r.nextInt(8);
+        int random = r.nextInt(31);
         try {
             JSONArray jarray = jsonObject.getJSONArray("items");
             JSONObject jb = (JSONObject) jarray.get(random);
@@ -57,7 +57,7 @@ public class Utility {
         return json;
     }
 
-    public static final String getRandomDare() {
+    public static String getRandomDare() {
         Random r = new Random();
         int random = r.nextInt(8);
         if (random == 0) {

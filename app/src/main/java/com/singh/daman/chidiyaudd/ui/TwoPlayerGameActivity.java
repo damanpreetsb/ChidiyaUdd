@@ -116,13 +116,15 @@ public class TwoPlayerGameActivity extends AppCompatActivity {
                 Log.d("done!", "Time's up!");
                 if (score2 > score) {
                     message = "Winner is " + name2;
-                    showDialog(message);
+                    String dare = "Dare: " + Utility.getRandomDare();
+                    showDialog(message, dare);
                 } else if (score2 < score) {
                     message = "Winner is " + name1;
-                    showDialog(message);
+                    String dare = "Dare: " + Utility.getRandomDare();
+                    showDialog(message, dare);
                 } else {
                     message = "Match is tie";
-                    showDialog(message);
+                    showDialog(message, null);
                 }
             }
 
@@ -212,12 +214,12 @@ public class TwoPlayerGameActivity extends AppCompatActivity {
         countDownTimer.start();
     }
 
-    public void showDialog(String msg) {
+    public void showDialog(String msg, String dare) {
 
         countDownTimer.cancel();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(msg)
-                .setMessage("Dare: " + Utility.getRandomDare())
+                .setMessage(dare)
                 .setPositiveButton("PLAY AGAIN", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Intent intent = getIntent();
