@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -27,6 +28,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.crash.FirebaseCrash;
 import com.singh.daman.chidiyaudd.R;
 import com.singh.daman.chidiyaudd.utils.Constants;
 
@@ -34,13 +37,13 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private LinearLayout linearLayout;
     private String name;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+
         Button btnOne = (Button) findViewById(R.id.btn_one);
         Button btnTwo = (Button) findViewById(R.id.btn_two);
         Button btnFour = (Button) findViewById(R.id.btn_four);
@@ -48,14 +51,14 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.main_app_name);
         linearLayout = (LinearLayout) findViewById(R.id.layout_button);
 
-        Boolean touch = getPackageManager().hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH);
-        if (touch) {
-            Toast.makeText(this, "Device has Touch Screen Multi-Touch capability", Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(this, "No Touch Screen Multi-Touch capability!", Toast.LENGTH_LONG).show();
-            btnTwo.setVisibility(View.GONE);
-            btnFour.setVisibility(View.GONE);
-        }
+//        Boolean touch = getPackageManager().hasSystemFeature(PackageManager.FEATURE_TOUCHSCREEN_MULTITOUCH);
+//        if (touch) {
+//            Toast.makeText(this, "Device has Touch Screen Multi-Touch capability", Toast.LENGTH_LONG).show();
+//        } else {
+//            Toast.makeText(this, "No Touch Screen Multi-Touch capability!", Toast.LENGTH_LONG).show();
+//            btnTwo.setVisibility(View.GONE);
+//            btnFour.setVisibility(View.GONE);
+//        }
 
         Typeface appNameFont = Typeface.createFromAsset(getAssets(), "main_menu.ttf");
         textView.setTypeface(appNameFont);
