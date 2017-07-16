@@ -3,6 +3,7 @@ package com.singh.daman.chidiyaudd.ui;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +46,9 @@ public class TwoPlayerSettingsActivity extends AppCompatActivity {
         etName2 = (EditText) findViewById(R.id.name_player2);
         etTime = (EditText) findViewById(R.id.set_time);
         etMode = (EditText) findViewById(R.id.set_mode);
+
+        Typeface menuFont = Typeface.createFromAsset(getAssets(), "menu_font.ttf");
+        btnPlay.setTypeface(menuFont);
 
         button1.setColor(color1);
         button2.setColor(color2);
@@ -90,11 +94,11 @@ public class TwoPlayerSettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!TextUtils.isEmpty(etName1.getText().toString()))
-                    name1 = etName1.getText().toString();
+                    name1 = etName1.getText().toString().toUpperCase();
                 else
                     name1 = Constants.player1;
                 if (!TextUtils.isEmpty(etName2.getText().toString()))
-                    name2 = etName2.getText().toString();
+                    name2 = etName2.getText().toString().toUpperCase();
                 else
                     name2 = Constants.player2;
                 if (!TextUtils.isEmpty(etTime.getText().toString()))

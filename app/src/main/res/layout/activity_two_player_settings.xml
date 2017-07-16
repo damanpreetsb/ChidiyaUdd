@@ -6,13 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:layout_marginTop="40dp"
+    android:background="@drawable/settings_back"
     tools:context="com.singh.daman.chidiyaudd.ui.TwoPlayerSettingsActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:orientation="horizontal">
 
         <android.support.design.widget.TextInputLayout
@@ -27,7 +30,7 @@
                 android:id="@+id/name_player1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Player 1"
+                android:hint="@string/player_1"
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
@@ -59,7 +62,7 @@
                 android:id="@+id/name_player2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Player 2"
+                android:hint="@string/player_2"
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
@@ -86,7 +89,7 @@
             android:id="@+id/set_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Time"
+            android:hint="@string/time_in_seconds"
             android:inputType="number"
             android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
@@ -104,7 +107,7 @@
             android:id="@+id/set_mode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Select the mode"
+            android:hint="@string/select_the_mode"
             android:focusable="false"
             android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
@@ -112,14 +115,8 @@
 
     <Button
         android:id="@+id/btn_play"
-        android:layout_margin="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="@string/play"
-        android:textColor="#263238"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        style="@style/MainButtons" />
 
 
 </LinearLayout>

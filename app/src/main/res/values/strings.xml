@@ -7,4 +7,8 @@
     <string name="four_player">Four Player</string>
     <string name="exit">Exit</string>
     <string name="play">Play</string>
+    <string name="time_in_seconds">Time (in seconds)</string>
+    <string name="select_the_mode">Select the mode</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
 </resources>

@@ -217,7 +217,7 @@ public class TwoPlayerGameActivity extends AppCompatActivity {
         countDownTimer.cancel();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(msg)
-                .setMessage(Utility.getRandomDare())
+                .setMessage("Dare: " + Utility.getRandomDare())
                 .setPositiveButton("PLAY AGAIN", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         Intent intent = getIntent();

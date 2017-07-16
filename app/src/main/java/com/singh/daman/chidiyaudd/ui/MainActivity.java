@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.CountDownTimer;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             btnFour.setVisibility(View.GONE);
         }
 
-        Typeface appNameFont = Typeface.createFromAsset(getAssets(), "app_name.ttf");
+        Typeface appNameFont = Typeface.createFromAsset(getAssets(), "main_menu.ttf");
         textView.setTypeface(appNameFont);
 
         Typeface menuFont = Typeface.createFromAsset(getAssets(), "menu_font.ttf");
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         super.onAnimationEnd(animation);
                         linearLayout.setVisibility(View.VISIBLE);
                         linearLayout.setAlpha(0.0f);
+                        textView.setBackgroundResource(R.drawable.appname_back);
                         linearLayout.animate()
                                 .alpha(1.0f)
                                 .setDuration(1000)
