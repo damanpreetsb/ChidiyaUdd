@@ -3,30 +3,37 @@ package com.singh.daman.chidiyaudd.ui;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.singh.daman.chidiyaudd.R;
+import com.singh.daman.chidiyaudd.utils.Constants;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private LinearLayout linearLayout;
+    private String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,9 +82,37 @@ public class MainActivity extends AppCompatActivity {
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TwoPlayerGameActivity.class);
-                startActivity(intent);
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                LayoutInflater layoutInflaterAndroid = LayoutInflater.from(MainActivity.this);
+                View mView = layoutInflaterAndroid.inflate(R.layout.dialog_edit_text, null);
+                AlertDialog.Builder alertDialogBuilderUserInput = new AlertDialog.Builder(MainActivity.this);
+                alertDialogBuilderUserInput.setView(mView);
+
+                final EditText etName = (EditText) mView.findViewById(R.id.userInputDialog);
+                alertDialogBuilderUserInput
+                        .setCancelable(false)
+                        .setPositiveButton("Send", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialogBox, int id) {
+                                if (!TextUtils.isEmpty(etName.getText().toString()))
+                                    name = etName.getText().toString().toUpperCase();
+                                else
+                                    name = Constants.player1;
+                                Intent intent = new Intent(MainActivity.this, OnePlayerGameActivity.class);
+                                intent.putExtra(Constants.player1, name);
+                                startActivity(intent);
+                                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                            }
+                        })
+
+                        .setNegativeButton("Cancel",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogBox, int id) {
+                                        dialogBox.cancel();
+                                    }
+                                });
+
+                AlertDialog alertDialogAndroid = alertDialogBuilderUserInput.create();
+                alertDialogAndroid.setCancelable(false);
+                alertDialogAndroid.show();
             }
         });
         btnTwo.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         btnFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TwoPlayerGameActivity.class);
+                Intent intent = new Intent(MainActivity.this, FourPlayerSettingsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }

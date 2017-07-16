@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:background="@drawable/background"
+    tools:context="com.singh.daman.chidiyaudd.ui.TwoPlayerGameActivity">
+
+    <TextView
+        android:id="@+id/tv_best_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"/>
+
+    <info.abdolahi.CircularMusicProgressBar xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/album_art"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="20dp"
+        app:border_color="@color/white"
+        app:border_width="4dp"
+        app:centercircle_diammterer="0.9"
+        app:draw_anticlockwise="false"
+        app:progress_color="@color/black"
+        app:progress_startAngle="270" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="8dp">
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/circle_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:cb_color="#283593"
+            app:cb_pressedRingWidth="20dp" />
+
+        <TextView
+            android:id="@+id/tv_name1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:layout_margin="40dp"
+            android:text="Player 1"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_item1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="10dp"
+            android:text="Time starts"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/score1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:padding="10dp"
+            android:text="Score: 0"
+            android:textColor="@color/white"/>
+    </FrameLayout>
+</LinearLayout>
