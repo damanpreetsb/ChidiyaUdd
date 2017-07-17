@@ -167,7 +167,6 @@ public class OnePlayerGameActivity extends AppCompatActivity {
                 checkTapOnce = false;
                 circleButton1.setClickable(true);
                 tvTime.setText("Time Up!");
-                System.out.println(creature.getName());
             }
         };
         countDownTimer.start();

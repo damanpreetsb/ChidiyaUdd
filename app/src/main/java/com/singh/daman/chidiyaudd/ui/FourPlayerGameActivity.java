@@ -142,7 +142,6 @@ public class FourPlayerGameActivity extends AppCompatActivity {
 
             public void onTick(long millisUntilFinished) {
                 progress = (int) (Math.round(totalSeconds * 1000 - millisUntilFinished) / (10 * totalSeconds));
-                Log.d("seconds elapsed: ", totalSeconds + " " + millisUntilFinished + " " + progress);
                 circularMusicProgressBar.setValue(progress);
                 circularMusicProgressBar2.setValue(progress);
             }
@@ -306,7 +305,6 @@ public class FourPlayerGameActivity extends AppCompatActivity {
                 tvTime2.setText("Time Up!");
                 tvTime3.setText("Time Up!");
                 tvTime4.setText("Time Up!");
-                System.out.println(creature.getName());
             }
         };
         countDownTimer.start();

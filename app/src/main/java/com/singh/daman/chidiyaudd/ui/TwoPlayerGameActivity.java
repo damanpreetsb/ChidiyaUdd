@@ -115,7 +115,6 @@ public class TwoPlayerGameActivity extends AppCompatActivity {
 
             public void onTick(long millisUntilFinished) {
                 progress = (int) (Math.round(totalSeconds * 1000 - millisUntilFinished) / (10 * totalSeconds));
-                Log.d("seconds elapsed: ", totalSeconds + " " + millisUntilFinished + " " + progress);
                 circularMusicProgressBar.setValue(progress);
             }
 
